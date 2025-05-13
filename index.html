@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Martin Gabrhel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Martina Gabrhela: technologie, bastlení, Bitcoin a hudba." />
+  <meta name="author" content="Martin Gabrhel" />
+  <link rel="stylesheet" href="style_with_theme_toggle.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+<a href="https://gabrhelovi.cz" class="btn-home"><i class="fas fa-arrow-left"></i> Domů</a>
+<button id="theme-toggle" class="theme-toggle">🌓 Přepnout téma</button>
+
+<header data-aos="fade-down">
+  <div class="container">
+    <h1>Martin Gabrhel</h1>
+    <p class="subtitle">Technologie • Bastlení • Bitcoin • Hudba</p>
+    <img class="badge" src="https://img.shields.io/badge/GitHub-MartinGabrhel-181717?style=for-the-badge&logo=github" alt="GitHub Badge">
+  </div>
+</header>
+
+<nav class="button-nav">
+  <div class="button-group">
+    <a href="#o-mne" class="btn"><i class="fas fa-user"></i> O mně</a>
+    <a href="#portfolio" class="btn"><i class="fas fa-code"></i> Portfolio</a>
+    <a href="#kontakt" class="btn"><i class="fas fa-envelope"></i> Kontakt</a>
+  </div>
+</nav>
+
+<main class="container">
+  <section id="o-mne" data-aos="fade-up">
+    <h2>🧠 O mně</h2>
+    <p>Ahoj 👋, vítej na mém osobním webu!</p>
+    <p>Jsem technologický nadšenec – bastlím, programuji, hraju na kytaru 🎸 i stylophone a občas zírám na hvězdy 🌌. Věnuji se také Bitcoinu a šifrování.</p>
+  </section>
+
+  <section id="portfolio" data-aos="fade-up">
+    <h2>🚀 Portfolio</h2>
+    <div class="cards">
+      <div class="card">
+        <h3><i class="fas fa-terminal"></i> Bitcoinový ATM</h3>
+        <p>Převod hotovosti do LN-bitcoinu přes mikrokontrolér.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-microchip"></i> Flipper Zero mod</h3>
+        <p>Custom firmware a rozšíření pro Flipper Zero.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-wifi"></i> ESP32 UI</h3>
+        <p>Live web rozhraní pro senzory v síti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" data-aos="fade-up">
+    <h2>📞 Kontakt</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:martin@example.com">martin@example.com</a></p>
+    <p><i class="fas fa-phone"></i> <a href="tel:+420777190171">+420 777 190 171</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Martin Gabrhel. All rights reserved.</p>
+</footer>
+
+<script src="theme-toggle.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>
