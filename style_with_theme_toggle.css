@@ -61,8 +61,15 @@ header h1 {
   opacity: 0.95;
 }
 
-.badge {
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
   margin-top: 1rem;
+}
+
+.badge {
   filter: brightness(1.1);
 }
 
@@ -152,10 +159,14 @@ h2 {
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
 }
 .card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 footer {
