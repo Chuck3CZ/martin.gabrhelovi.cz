@@ -12,6 +12,48 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    .portfolio-group {
+      margin-top: 2rem;
+    }
+    .portfolio-group h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: var(--fg);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.4rem;
+      opacity: 0.85;
+    }
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--accent);
+    }
+    .card p {
+      font-size: 0.88rem;
+      opacity: 0.8;
+      line-height: 1.5;
+    }
+    .lang-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: var(--bg);
+      color: var(--fg);
+      border-radius: 4px;
+      padding: 0.1rem 0.4rem;
+      margin-top: 0.6rem;
+      opacity: 0.55;
+    }
+    .website-card {
+      border: 2px solid var(--accent);
+    }
+    .site-url {
+      display: block;
+      font-size: 0.78rem;
+      opacity: 0.5;
+      margin-top: 0.35rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -49,11 +91,13 @@
   <div class="button-group">
     <a href="#o-mne" class="btn"><i class="fas fa-user"></i> O mně</a>
     <a href="#portfolio" class="btn"><i class="fas fa-code"></i> Portfolio</a>
+    <a href="#weby" class="btn"><i class="fas fa-globe"></i> Weby</a>
     <a href="#kontakt" class="btn"><i class="fas fa-envelope"></i> Kontakt</a>
   </div>
 </nav>
 
 <main class="container">
+
   <section id="o-mne" data-aos="fade-up">
     <h2>🧠 O mně</h2>
     <p>Ahoj 👋, vítej na mém osobním webu!</p>
@@ -61,15 +105,131 @@
   </section>
 
   <section id="portfolio" data-aos="fade-up">
-    <h2>🚀 Portfolio</h2>
+    <h2>🚀 Portfolio – GitHub projekty</h2>
+
+    <div class="portfolio-group">
+      <h3>🔧 Hardware &amp; IoT</h3>
+      <div class="cards">
+        <a class="card" href="https://github.com/Chuck3CZ/Arduino_Chicken_Door" target="_blank" rel="noopener">
+          <h3>🐔 Arduino Chicken Door</h3>
+          <p>Automatické dvířka pro kurník řízené Arduinem – otevírání a zavírání podle denní doby.</p>
+          <span class="lang-tag">C++</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/Bitcoin_martix_scroller" target="_blank" rel="noopener">
+          <h3>₿ Bitcoin Matrix Scroller</h3>
+          <p>Scrollující zobrazení aktuální ceny Bitcoinu na LED matrix displeji postaveném na ESP8266.</p>
+          <span class="lang-tag">C++</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker" target="_blank" rel="noopener">
+          <h3>📟 ESP8266 Bitcoin OLED Ticker</h3>
+          <p>Bitcoin ticker zobrazující cenu na malém OLED displeji připojeném přes Wi-Fi modul ESP8266.</p>
+          <span class="lang-tag">C++</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/lnpos" target="_blank" rel="noopener">
+          <h3>💳 LNPoS</h3>
+          <p>Testovací implementace hardwarového platebního terminálu pro Bitcoin Lightning platby přes NFC.</p>
+          <span class="lang-tag">C</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/flashforge-finder-api" target="_blank" rel="noopener">
+          <h3>🖨️ FlashForge Finder API</h3>
+          <p>Dokumentace a podpora síťového API pro 3D tiskárny FlashForge Finder a Creator 3.</p>
+          <span class="lang-tag">Dokumentace</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="portfolio-group">
+      <h3>🏠 Home Assistant</h3>
+      <div class="cards">
+        <a class="card" href="https://github.com/Chuck3CZ/hassio-addons" target="_blank" rel="noopener">
+          <h3>🧩 Hassio Addons</h3>
+          <p>Repozitář vlastních doplňků (addons) pro Home Assistant – usnadnění instalace a provozu vlastních služeb na domácím serveru.</p>
+          <span class="lang-tag">Dockerfile</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/HomeAssistant-EGD-PowerData" target="_blank" rel="noopener">
+          <h3>⚡ EGD Power Data</h3>
+          <p>Integrace pro Home Assistant stahující data o spotřebě a výrobě elektřiny z portálu distribuce EGD.</p>
+          <span class="lang-tag">Python</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/qnap" target="_blank" rel="noopener">
+          <h3>🗄️ QNAP HA integrace</h3>
+          <p>Home Assistant integrace pro QNAP NAS – monitoring a ovládání přes moderní ConfigFlow rozhraní.</p>
+          <span class="lang-tag">Python</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/python-qnap" target="_blank" rel="noopener">
+          <h3>🐍 Python QNAP</h3>
+          <p>Python knihovna pro komunikaci s QNAP NAS API – základ pro Home Assistant integraci.</p>
+          <span class="lang-tag">Python</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/goodwe" target="_blank" rel="noopener">
+          <h3>☀️ Goodwe FVE</h3>
+          <p>Nástroj pro stahování provozních dat z fotovoltaického měniče Goodwe XS a jejich integraci do HA.</p>
+          <span class="lang-tag">Python</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="portfolio-group">
+      <h3>₿ Bitcoin, Lightning &amp; Nostr</h3>
+      <div class="cards">
+        <a class="card" href="https://github.com/Chuck3CZ/nostdress" target="_blank" rel="noopener">
+          <h3>⚡ Nostdress</h3>
+          <p>Self-hostovaný server pro Lightning adresy (fork satdress) s rozšířenou podporou Nostr protokolu – NIP05 a NIP57.</p>
+          <span class="lang-tag">Go</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ" target="_blank" rel="noopener">
+          <h3>🦅 Phoenix – česká lokalizace</h3>
+          <p>Příspěvek k překladu self-custodial Bitcoin Lightning peněženky Phoenix do češtiny.</p>
+          <span class="lang-tag">HTML</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="portfolio-group">
+      <h3>🎮 Hry &amp; Mody</h3>
+      <div class="cards">
+        <a class="card" href="https://github.com/Chuck3CZ/Skill-Recovery-Journal" target="_blank" rel="noopener">
+          <h3>📓 Skill Recovery Journal</h3>
+          <p>Mod pro Project Zomboid – craftovatelný deník umožňující zaznamenávat dovednosti a obnovovat ztracenou postavu po smrti.</p>
+          <span class="lang-tag">Lua</span>
+        </a>
+        <a class="card" href="https://github.com/Chuck3CZ/ProjectZomboidTranslations" target="_blank" rel="noopener">
+          <h3>🌍 Project Zomboid překlady</h3>
+          <p>Lokalizační soubory pro hru Project Zomboid – přispění k české jazykové verzi hry.</p>
+          <span class="lang-tag">Lokalizace</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="weby" data-aos="fade-up">
+    <h2>🌐 Mé weby</h2>
     <div class="cards">
-      <a class="card" href="https://github.com/Chuck3CZ/Arduino_Chicken_Door" target="_blank" rel="noopener">
-        <h3><i class="fas fa-door-open"></i> Arduino Chicken Door</h3>
-        <p>Automatické dvířka pro kurník řízené Arduinem.</p>
+      <a class="card website-card" href="https://gabrhelovi.cz" target="_blank" rel="noopener">
+        <h3>🏡 Gabrhelovi.cz</h3>
+        <p>Rodinný web rodiny Gabrhelových – blog, galerie a kontakty na jednotlivé členy rodiny.</p>
+        <span class="site-url">gabrhelovi.cz</span>
       </a>
-      <a class="card" href="https://github.com/Chuck3CZ/Bitcoin_martix_scroller" target="_blank" rel="noopener">
-        <h3><i class="fab fa-bitcoin"></i> Bitcoin Matrix Scroller</h3>
-        <p>Scrollující zobrazení Bitcoin ceny na LED matrix displeji.</p>
+      <a class="card website-card" href="https://larvy.eu" target="_blank" rel="noopener">
+        <h3>🎭 Larvy.eu</h3>
+        <p>Web spolku pořádajícího LARP (Live Action Roleplay) akce – registrace na hry, galerie a aktuality.</p>
+        <span class="site-url">larvy.eu</span>
+      </a>
+      <a class="card website-card" href="https://produkovany.cz" target="_blank" rel="noopener">
+        <h3>🗳️ ProDukovany.cz</h3>
+        <p>Volební web kandidátky ProDukovany pro komunální volby 2026 – program, kandidáti a kontakt.</p>
+        <span class="site-url">produkovany.cz</span>
+      </a>
+      <a class="card website-card" href="https://abuklid.cz" target="_blank" rel="noopener">
+        <h3>🧹 A+B Klid</h3>
+        <p>Prezentace firmy A+B kompletní služby (od 1995) – úklid, zahrada, řemeslné práce a správa nemovitostí v Praze a středních Čechách.</p>
+        <span class="site-url">abuklid.cz</span>
+      </a>
+      <a class="card website-card" href="https://enecos.cz" target="_blank" rel="noopener">
+        <h3>⚡ Enecos s.r.o.</h3>
+        <p>Firma z Dukovan specializující se na automatické systémy řízení malých vodních elektráren a průmyslových energetických zařízení.</p>
+        <span class="site-url">enecos.cz</span>
       </a>
     </div>
   </section>
@@ -79,6 +239,7 @@
     <p><i class="fas fa-envelope"></i> <a href="mailto:martin@example.com">martin@example.com</a></p>
     <p><i class="fas fa-phone"></i> <a href="tel:+420777190171">+420 777 190 171</a></p>
   </section>
+
 </main>
 
 <footer>
