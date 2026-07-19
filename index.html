@@ -53,6 +53,49 @@
       opacity: 0.5;
       margin-top: 0.35rem;
     }
+
+    /* Avatar */
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin: 0 auto 1rem;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Stack / Skills */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .stack-category {
+      background: var(--bg);
+      border-radius: 0.75rem;
+      padding: 0.9rem 1rem;
+    }
+    .stack-category h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      font-size: 0.78rem;
+      background: var(--card-bg);
+      color: var(--fg);
+      border: 1px solid rgba(127,127,127,0.25);
+      border-radius: 6px;
+      padding: 0.2rem 0.55rem;
+    }
   </style>
 </head>
 <body>
@@ -62,6 +105,7 @@
 
 <header data-aos="fade-down">
   <div class="container">
+    <img class="avatar" src="https://github.com/Chuck3CZ.png" alt="Martin Gabrhel" />
     <h1>Martin Gabrhel</h1>
     <p class="subtitle">Technologie • Bastlení • Bitcoin • Hudba</p>
     <div class="badges">
@@ -90,6 +134,7 @@
 <nav class="button-nav">
   <div class="button-group">
     <a href="#o-mne" class="btn"><i class="fas fa-user"></i> O mně</a>
+    <a href="#stack" class="btn"><i class="fas fa-layer-group"></i> Stack</a>
     <a href="#portfolio" class="btn"><i class="fas fa-code"></i> Portfolio</a>
     <a href="#weby" class="btn"><i class="fas fa-globe"></i> Weby</a>
     <a href="#kontakt" class="btn"><i class="fas fa-envelope"></i> Kontakt</a>
@@ -102,6 +147,70 @@
     <h2>🧠 O mně</h2>
     <p>Ahoj 👋, vítej na mém osobním webu!</p>
     <p>Jsem technologický nadšenec – bastlím, programuji, hraju na kytaru 🎸 i stylophone a občas zírám na hvězdy 🌌. Věnuji se také Bitcoinu a šifrování.</p>
+  </section>
+
+  <section id="stack" data-aos="fade-up">
+    <h2>🛠️ Tech Stack</h2>
+    <div class="stack-grid">
+      <div class="stack-category">
+        <h4>⚡ Hardware &amp; Embedded</h4>
+        <div class="stack-tags">
+          <span class="tag">C / C++</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">ESP8266</span>
+          <span class="tag">OLED / LED matrix</span>
+          <span class="tag">NFC</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h4>🏠 Smart Home</h4>
+        <div class="stack-tags">
+          <span class="tag">Home Assistant</span>
+          <span class="tag">Python</span>
+          <span class="tag">Node-RED</span>
+          <span class="tag">Zigbee</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h4>₿ Bitcoin &amp; Lightning</h4>
+        <div class="stack-tags">
+          <span class="tag">Lightning Network</span>
+          <span class="tag">Nostr</span>
+          <span class="tag">Go</span>
+          <span class="tag">LNbits</span>
+          <span class="tag">Self-hosting</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h4>🌐 Web</h4>
+        <div class="stack-tags">
+          <span class="tag">HTML / CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">WordPress</span>
+          <span class="tag">PHP</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h4>🔧 Systém &amp; Sítě</h4>
+        <div class="stack-tags">
+          <span class="tag">Linux</span>
+          <span class="tag">QNAP NAS</span>
+          <span class="tag">SSH</span>
+          <span class="tag">Git</span>
+          <span class="tag">Raspberry Pi</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h4>🎮 Ostatní</h4>
+        <div class="stack-tags">
+          <span class="tag">Lua</span>
+          <span class="tag">Modding</span>
+          <span class="tag">Lokalizace</span>
+          <span class="tag">3D tisk</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="portfolio" data-aos="fade-up">
