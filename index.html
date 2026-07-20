@@ -54,6 +54,38 @@
       margin-top: 0.35rem;
     }
 
+    /* Scroll down arrow */
+    .scroll-down {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      animation: bounce 2s infinite;
+      line-height: 1;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* Lightning button */
+    .btn-lightning {
+      background: #f7931a;
+      color: #fff;
+      border-color: #f7931a;
+      display: inline-block;
+    }
+    body.dark .btn-lightning {
+      background: #f7931a;
+      color: #111;
+      border-color: #f7931a;
+    }
+    .btn-lightning:hover {
+      background: #e07c0e;
+      color: #fff;
+    }
+
     /* Avatar */
     .avatar {
       width: 110px;
@@ -128,6 +160,7 @@
         <img class="badge" src="https://img.shields.io/badge/-chuck3cz-000000?style=for-the-badge&logo=steam&logoColor=white" alt="Steam Badge">
       </a>
     </div>
+    <a href="#o-mne" class="scroll-down" aria-label="Scrollovat dolů">&#8964;</a>
   </div>
 </header>
 
@@ -168,7 +201,7 @@
         <span class="site-url">produkovany.cz</span>
       </a>
       <a class="card website-card" href="https://abuklid.cz" target="_blank" rel="noopener">
-        <h3>🧹 A+B Klid</h3>
+        <h3>🧹 A+B Úklid</h3>
         <p>Prezentace firmy A+B kompletní služby (od 1995) – úklid, zahrada, řemeslné práce a správa nemovitostí v Praze a středních Čechách.</p>
         <span class="site-url">abuklid.cz</span>
       </a>
@@ -347,15 +380,21 @@
     <h2>📞 Kontakt</h2>
     <p><i class="fas fa-envelope"></i> <a href="mailto:martin@gabrhelovi.cz">martin@gabrhelovi.cz</a></p>
     <p><i class="fas fa-phone"></i> <a href="tel:+420777190171">+420 777 190 171</a></p>
+    <p style="margin-top:1rem;">
+      <a href="lightning:martin@lnpay.cz" class="btn btn-lightning">⚡ Podpořit Bitcoinem (Lightning)</a>
+    </p>
   </section>
 
 </main>
 
 <footer>
-  <p>&copy; 2025 Martin Gabrhel. All rights reserved.</p>
+  <p>&copy; <span id="footer-year"></span> Martin Gabrhel. All rights reserved.</p>
 </footer>
 
 <script src="theme-toggle.js"></script>
-<script>AOS.init();</script>
+<script>
+  AOS.init();
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
