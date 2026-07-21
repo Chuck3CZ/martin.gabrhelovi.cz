@@ -4,10 +4,23 @@
   <meta charset="UTF-8" />
   <title>Martin Gabrhel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio Martina Gabrhela: technologie, bastlení, Bitcoin a hudba." />
+  <meta name="description" content="Portfolio Martina Gabrhela: technologie, bastlení, HW servis, Bitcoin a hudba." />
   <meta name="author" content="Martin Gabrhel" />
   <link rel="stylesheet" href="style_with_theme_toggle.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Martin Gabrhel" />
+  <meta property="og:description" content="Technologie, bastlení, HW servis, Bitcoin a hudba." />
+  <meta property="og:url" content="https://martin.gabrhelovi.cz" />
+  <meta property="og:image" content="https://github.com/Chuck3CZ.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Martin Gabrhel" />
+  <meta name="twitter:description" content="Technologie, bastlení, HW servis, Bitcoin a hudba." />
+  <meta name="twitter:image" content="https://github.com/Chuck3CZ.png" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -170,6 +183,43 @@
     #opravy .card {
       cursor: default;
     }
+
+    /* Anchor jumps shouldn't hide the heading under the fixed buttons */
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    #weby .cards {
+      justify-content: flex-start;
+    }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
+      background: var(--card-bg);
+      color: var(--fg);
+      border: 2px solid var(--accent);
+      border-radius: 9999px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      text-decoration: none;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -181,7 +231,7 @@
 <a href="https://gabrhelovi.cz" class="btn-home">↩ Zpět</a>
 <button id="theme-toggle" class="theme-toggle">🌓 Přepnout téma</button>
 
-<header data-aos="fade-down">
+<header id="top" data-aos="fade-down">
   <div class="container">
     <img class="avatar" src="https://github.com/Chuck3CZ.png" alt="Martin Gabrhel" />
     <h1>Martin Gabrhel</h1>
@@ -227,6 +277,7 @@
     <h2>🧠 O mně</h2>
     <p>Ahoj 👋, vítej na mém osobním webu!</p>
     <p>Jsem technologický nadšenec – bastlím, programuji, hraju na kytaru 🎸 i stylophone a občas zírám na hvězdy 🌌. Věnuji se také Bitcoinu a šifrování.</p>
+    <p>Kromě softwaru a chytré domácnosti mě baví i hardware zblízka – od diagnostiky na úrovni součástek po výměnu baterií a displejů, jak ukazuje sekce <a href="#opravy">Opravy zařízení</a> níže.</p>
   </section>
 
   <section id="weby" data-aos="fade-up">
@@ -271,6 +322,7 @@
           <span class="tag">ESP8266</span>
           <span class="tag">OLED / LED matrix</span>
           <span class="tag">NFC</span>
+          <span class="tag">Mikropájení / HW servis</span>
         </div>
       </div>
       <div class="stack-category">
@@ -408,7 +460,7 @@
           <p>Displej, baterie, obnova po MDM/remote zámku.</p>
         </div>
         <div class="card device-card">
-          <div class="device-photo"><img src="images/devices/ipad-pro-97.webp" alt="iPad Pro 9,7"" loading="lazy" /></div>
+          <div class="device-photo"><img src="images/devices/ipad-pro-97.webp" alt="iPad Pro 9,7&quot;" loading="lazy" /></div>
           <h3>iPad Pro 9,7" (2016)</h3>
           <p>Výměna baterie.</p>
         </div>
@@ -429,27 +481,27 @@
       <h3>💻 Počítače a notebooky</h3>
       <div class="cards">
         <div class="card device-card">
-          <div class="device-photo"><img src="images/devices/macbook-air-a1466.webp" alt="MacBook Air 13" A1466" loading="lazy" /></div>
+          <div class="device-photo"><img src="images/devices/macbook-air-a1466.webp" alt="MacBook Air 13&quot; A1466" loading="lazy" /></div>
           <h3>MacBook Air 13" A1466 (2013–2015)</h3>
           <p>Servis základní desky, koroze, diagnostika napájení.</p>
         </div>
         <div class="card device-card">
-          <div class="device-photo"><img src="images/devices/macbook-pro-13-retina.webp" alt="MacBook Pro 13" Retina A1502" loading="lazy" /></div>
+          <div class="device-photo"><img src="images/devices/macbook-pro-13-retina.webp" alt="MacBook Pro 13&quot; Retina A1502" loading="lazy" /></div>
           <h3>MacBook Pro 13" Retina A1502 (2013–2015)</h3>
           <p>Baterie nenabíjí / nedetekována.</p>
         </div>
         <div class="card device-card">
-          <div class="device-photo"><img src="images/devices/macbook-pro-13-retina.webp" alt="MacBook Pro 13" (2015)" loading="lazy" /></div>
+          <div class="device-photo"><img src="images/devices/macbook-pro-13-retina.webp" alt="MacBook Pro 13&quot; (2015)" loading="lazy" /></div>
           <h3>MacBook Pro 13" (2015)</h3>
           <p>Baterie, nucené nabíjení bez BMS komunikace.</p>
         </div>
         <div class="card device-card">
-          <div class="device-photo"><img src="images/devices/macbook-pro-a1278.webp" alt="MacBook Pro 13" A1278" loading="lazy" /></div>
+          <div class="device-photo"><img src="images/devices/macbook-pro-a1278.webp" alt="MacBook Pro 13&quot; A1278" loading="lazy" /></div>
           <h3>MacBook Pro 13" A1278 (2009–2012)</h3>
           <p>Výměna baterie.</p>
         </div>
         <div class="card device-card">
-          <div class="device-photo"><img src="images/devices/macbook-pro-17.webp" alt="MacBook Pro 17"" loading="lazy" /></div>
+          <div class="device-photo"><img src="images/devices/macbook-pro-17.webp" alt="MacBook Pro 17&quot;" loading="lazy" /></div>
           <h3>MacBook Pro 17" (2009–2011)</h3>
           <p>Diagnostika nabíjení / MagSafe.</p>
         </div>
@@ -608,6 +660,8 @@
 
 </main>
 
+<a href="#top" id="back-to-top" class="back-to-top" aria-label="Nahoru">&#8963;</a>
+
 <footer>
   <p>&copy; <span id="footer-year"></span> Martin Gabrhel. All rights reserved.</p>
 </footer>
@@ -616,6 +670,11 @@
 <script>
   AOS.init();
   document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 600);
+  });
 </script>
 </body>
 </html>
